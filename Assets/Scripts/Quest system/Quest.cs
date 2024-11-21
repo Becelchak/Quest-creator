@@ -37,4 +37,9 @@ public class Quest : ScriptableObject
     //[SerializeField] private string customer;
     //[SerializeField] private string target;
     //[SerializeField] private double deadline;
+
+    public string GetName()
+    {
+        return name;
+    }
 }

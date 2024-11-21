@@ -47,9 +47,9 @@ public class ObjectCreatorSlots : MonoBehaviour
         {
             SelectObject = ToolsTable.GetObject(nameItem);
         }
-        else
+        else if (SelectObject != null)
         {
-            if (SelectObject.GetSlotSize() > 1 && OtherSlot.slotTaken == slotTaken && OtherSlot.SelectObject == SelectObject)
+            if (SelectObject.GetSlotSize() == 2 && OtherSlot.slotTaken == slotTaken && OtherSlot.SelectObject == SelectObject)
             {
                 OtherSlot.SelectObject = null;
                 OtherSlot.slotTaken = false;
@@ -65,6 +65,12 @@ public class ObjectCreatorSlots : MonoBehaviour
             {
                 case 1:
                     slotTaken = true;
+                    if (OtherSlot.slotTaken && !OtherSlot.dropdown.interactable)
+                    {
+                        OtherSlot.SelectObject = null;
+                        OtherSlot.slotTaken = false;
+                        OtherSlot.dropdown.interactable = true;
+                    }
                     break;
                 case 2:
                     if (OtherSlot.slotTaken && OtherSlot.SelectObject == SelectObject)
@@ -83,6 +89,7 @@ public class ObjectCreatorSlots : MonoBehaviour
                     else
                     {
                         SelectObject = null;
+                        slotTaken = false;
                         dropdown.value = 0;
                     }
                     break;
@@ -90,5 +97,30 @@ public class ObjectCreatorSlots : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public bool GetSlotTaken()
+    {
+        return slotTaken;
+    }
+
+    public int GetSlotSize()
+    {
+        return SelectObject.GetSlotSize();
+    }
+
+    public ObjectCreatorSlots GetFirstSlot()
+    {
+        return ThisSlot;
+    }
+
+    public ObjectCreatorSlots GetSecondSlot()
+    {
+        return OtherSlot;
+    }
+
+    public InanimateObject GetSelectObject()
+    {
+        return SelectObject;
     }
 }

@@ -13,6 +13,17 @@ public class Animal : ScriptableObject
     [SerializeField] private bool isTO;
     [SerializeField] private bool isFalseTarget;
 
+
+    public Animal(string name, List<Action> actions, ThreatAndOpportunity risk, bool isTarget, bool isTO, bool isFalseTarget)
+    {
+        this.name = name;
+        this.actions = actions;
+        this.risk = risk;
+        this.isTarget = isTarget;
+        this.isTO = isTO;
+        this.isFalseTarget = isFalseTarget;
+    }
+
     public string GetName()
     {
         return name;

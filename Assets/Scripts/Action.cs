@@ -11,18 +11,21 @@ public class Action : ScriptableObject
     [SerializeField] private string name;
     [SerializeField] private Human worker;
     [SerializeField] private InanimateObject tool;
+    // Продуктивность действия
     [SerializeField] private double toolProductivity;
+    // Затраты времени на выполнение действия
     [SerializeField] private double timeRequired;
 
     // Условие для добычи
-    [SerializeField] private InanimateObject? toolStipulation;
+    [SerializeField] private InanimateObject? toolCondition;
     // Нейтрализатор
     [SerializeField] private InanimateObject? toolNeutralizer;
     [SerializeField] private double toolNeutralizerProductivity;
     [SerializeField] private double toolNeutralizerTimeRequired;
-    [SerializeField] private InanimateObject? toolNeutralizerStipulation;
+    //Условие для использования инструмента нейтрализатора
+    [SerializeField] private InanimateObject? toolNeutralizerCondition;
     // Условие вместе с персонажем
-    [SerializeField] private Human? stipulation;
+    [SerializeField] private Human? сondition;
 
     [SerializeField] private double coefficient;
 

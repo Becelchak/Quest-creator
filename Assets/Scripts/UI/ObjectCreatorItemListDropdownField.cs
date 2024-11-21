@@ -36,6 +36,8 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
     {
         NameSelectItem = dropdown.options[dropdown.value].text;
 
+        if (NameSelectItem == "") return;
+
         var inst = GameObject.Instantiate(prefabe);
         var par = prefabe.transform.parent;
         var container = par.GetComponentInChildren<GridLayoutGroup>().gameObject;

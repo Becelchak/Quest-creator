@@ -31,6 +31,21 @@ public class InanimateObject : ScriptableObject
     [SerializeField] private int slots;
     // Сколько доступно в квесте?
     [SerializeField] private int numberOfAvailable;
+
+    public InanimateObject(string name, InanimateType type, List<Location> locations, Action? action, double buffCoefficient, ThreatAndOpportunity? threat, ThreatAndOpportunity? opportunity, Action? needAction, int slots, int numberOfAvailable)
+    {
+        this.name = name;
+        this.inanimateType = type;
+        this.locations = locations;
+        this.action = action;
+        this.buffCoefficient = buffCoefficient;
+        this.threat = threat;
+        this.opportunity = opportunity;
+        this.needAction = needAction;
+        this.slots = slots;
+        this.numberOfAvailable = numberOfAvailable;
+    }
+
     public string GetName()
     {
         return name;

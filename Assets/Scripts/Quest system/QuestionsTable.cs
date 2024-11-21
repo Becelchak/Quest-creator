@@ -1,18 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
-public class QuestionsTable : MonoBehaviour
+[CreateAssetMenu(menuName = "Quest system/ QuestionsTable")]
+public class QuestionsTable : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private List<Quest> table;
+    public List<Quest> GetTable() { return table; }
 }

@@ -22,7 +22,10 @@ public class ThreatAndOpportunity : ScriptableObject
     [SerializeField] private GameObject trigger;
 
 
-
+    public string GetName()
+    {
+        return name;
+    }
 
     public enum Type{
         threat = 0,
