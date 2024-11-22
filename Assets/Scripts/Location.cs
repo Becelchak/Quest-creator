@@ -9,8 +9,14 @@ public class Location : ScriptableObject
     [SerializeField] private string name;
     [SerializeField] private bool isTarget;
     [SerializeField] private SerializedDictionary<Location,double> locationsDistance;
-    //[SerializeField] private NaturesEvent naturesEvents;
 
+
+    public Location(string name, bool isTarget, SerializedDictionary<Location, double> locationsDistance)
+    {
+        this.name = name;
+        this.isTarget = isTarget;
+        this.locationsDistance = locationsDistance;
+    }
     public string GetName()
     {
         return name;

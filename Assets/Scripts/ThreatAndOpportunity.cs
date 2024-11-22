@@ -22,6 +22,17 @@ public class ThreatAndOpportunity : ScriptableObject
     [SerializeField] private GameObject trigger;
 
 
+    public ThreatAndOpportunity(string name, Type typeObject, double changeTimeAction, double changeCount, InanimateObject neutralizer, double changeUV, double probability, GameObject trigger)
+    {
+        this.name = name;
+        this.typeObject = typeObject;
+        this.changeTimeAction = changeTimeAction;
+        this.changeCount = changeCount;
+        this.neutralizer = neutralizer;
+        this.changeUV = changeUV;
+        this.probability = probability;
+        this.trigger = trigger;
+    }
     public string GetName()
     {
         return name;

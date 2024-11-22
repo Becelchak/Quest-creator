@@ -13,6 +13,7 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
 
     [SerializeField] private string pathFolder = "Assets/Scripts/Other/Quest system/Quests";
     private TMP_Dropdown dropdown;
+    //private double tempDistance;
 
     void Start()
     {
@@ -51,5 +52,30 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
         canvasGroupe.blocksRaycasts = true;
         canvasGroupe.interactable = true;
 
+    }
+
+    //public void SetLocationDistance(Slider slider)
+    //{
+    //    tempDistance = slider.value;
+    //}
+
+    public void AddItemInListLocationDistance(Slider slider)
+    {
+        NameSelectItem = dropdown.options[dropdown.value].text;
+
+        if (NameSelectItem == "") return;
+
+        var inst = GameObject.Instantiate(prefabe);
+        var par = prefabe.transform.parent;
+        var container = par.GetComponentInChildren<GridLayoutGroup>().gameObject;
+        inst.name = NameSelectItem;
+        inst.transform.SetParent(container.transform);
+
+        inst.GetComponentInChildren<Text>().text = $"{NameSelectItem} - {slider.value}";
+
+        var canvasGroupe = inst.GetComponent<CanvasGroup>();
+        canvasGroupe.alpha = 1;
+        canvasGroupe.blocksRaycasts = true;
+        canvasGroupe.interactable = true;
     }
 }

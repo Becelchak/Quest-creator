@@ -8,7 +8,7 @@ using UnityEngine;
 public class ThreatAndOpportunityTable : ScriptableObject
 {
     [SerializeField] private List<ThreatAndOpportunity> table;
-    public void AddLocation(string assetName)
+    public void AddTAO(string assetName)
     {
         var ThreatAndOpportunityNew = AssetDatabase.LoadAssetAtPath<ThreatAndOpportunity>($"Assets/Scripts/Other/ThreatAndOpportunity/{assetName}.asset");
         if (!table.Contains(ThreatAndOpportunityNew))

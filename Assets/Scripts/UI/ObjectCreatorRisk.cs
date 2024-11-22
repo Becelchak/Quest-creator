@@ -34,4 +34,9 @@ public class ObjectCreatorRisk : MonoBehaviour
             SelectObject = null;
         }
     }
+
+    public ThreatAndOpportunity GiveSelectObject()
+    {
+        return SelectObject;
+    }
 }
