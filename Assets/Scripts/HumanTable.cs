@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Tables/ HumanTable")]
-public class HumanTable : ScriptableObject
+public class HumanTable : Table
 {
     [SerializeField] private List<Human> table;
 

@@ -12,26 +12,104 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
     [SerializeField] private GameObject prefabe;
 
     [SerializeField] private string pathFolder = "Assets/Scripts/Other/Quest system/Quests";
+    [SerializeField] private Table table;
+    [SerializeField] private CategoryTable category;
     private TMP_Dropdown dropdown;
-    //private double tempDistance;
 
     void Start()
     {
         dropdown = GetComponent<TMP_Dropdown>();
-
-        var directory = new DirectoryInfo(pathFolder);
-        var files = directory.GetFiles("*.asset");
-        foreach(var file in files)
+        if (table != null)
         {
-            var name = file.Name.Split('.')[0];
-            if(!name.Contains("Table"))
-                dropdown.options.Add(new TMP_Dropdown.OptionData(name));
+            switch (category)
+            {
+                case CategoryTable.tool:
+                    var toolTable1 = table as ToolsTable;
+                    foreach (var item in toolTable1.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+                    break;
+                case CategoryTable.human:
+                    var humanTable = table as HumanTable;
+                    foreach (var item in humanTable.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+                    break;
+                case CategoryTable.animal:
+                    var animalTable = table as AnimalTable;
+                    foreach (var item in animalTable.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+                    break;
+                case CategoryTable.location:
+                    var locationTable = table as LocationsTable;
+                    foreach (var item in locationTable.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+                    break;
+                case CategoryTable.all:
+                    var dictionaryTable = GameObject.Find("ButtonCreateThreatAdnOpportunity").GetComponent<ObjectCreatorButtonCreate>().GetTables();
+                    toolTable1 = dictionaryTable["toolTable"] as ToolsTable;
+                    //var toolTable2 = dictionaryTable["toolNeutralizationTable"] as ToolsTable;
+                    //humanTable = dictionaryTable["humanTable"] as HumanTable;
+                    //var humanTable2 = dictionaryTable["characters"] as HumanTable;
+                    animalTable = dictionaryTable["animals"] as AnimalTable;
+                    //locationTable = dictionaryTable["locationTable"] as LocationsTable;
+                    foreach (var item in toolTable1.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+
+                    //foreach (var item in toolTable2.GetTable())
+                    //{
+                    //    dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    //}
+
+                    //foreach (var item in humanTable.GetTable())
+                    //{
+                    //    dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    //}
+
+                    //foreach (var item in humanTable2.GetTable())
+                    //{
+                    //    dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    //}
+
+                    foreach (var item in animalTable.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+
+                    //foreach (var item in locationTable.GetTable())
+                    //{
+                    //    dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    //}
+                    break;
+                default:
+                    break;
+            }
+
         }
-    }
-    void Update()
-    {
+        else
+        {
+            var directory = new DirectoryInfo(pathFolder);
+            var files = directory.GetFiles("*.asset");
+            foreach (var file in files)
+            {
+                var name = file.Name.Split('.')[0];
+                if (!name.Contains("Table"))
+                    dropdown.options.Add(new TMP_Dropdown.OptionData(name));
+            }
+        }
         
     }
+    //public void AddItemInListByTable()
+    //{
+    //}
 
     public void AddItemInList()
     {
@@ -54,11 +132,6 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
 
     }
 
-    //public void SetLocationDistance(Slider slider)
-    //{
-    //    tempDistance = slider.value;
-    //}
-
     public void AddItemInListLocationDistance(Slider slider)
     {
         NameSelectItem = dropdown.options[dropdown.value].text;
@@ -77,5 +150,14 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
         canvasGroupe.alpha = 1;
         canvasGroupe.blocksRaycasts = true;
         canvasGroupe.interactable = true;
+    }
+
+    public enum CategoryTable
+    {
+        tool = 1,
+        human = 2,
+        animal = 3,
+        location = 4,
+        all = 5
     }
 }

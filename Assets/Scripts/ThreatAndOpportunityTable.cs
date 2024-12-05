@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Tables/ ThreatAndOpportunityTable")]
-public class ThreatAndOpportunityTable : ScriptableObject
+public class ThreatAndOpportunityTable : Table
 {
     [SerializeField] private List<ThreatAndOpportunity> table;
     public void AddTAO(string assetName)

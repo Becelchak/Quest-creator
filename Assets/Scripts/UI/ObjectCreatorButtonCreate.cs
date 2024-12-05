@@ -68,14 +68,17 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
     [SerializeField] private InanimateObject neutralizer;
     [SerializeField] private double changeUV;
     [SerializeField] private double probability;
-    [SerializeField] private GameObject trigger;
+    [SerializeField] private ScriptableObject trigger;
 
     //Action
+    [Header("Action")]
     [SerializeField] private double toolProductivity;
     [SerializeField] private double timeRequired;
-    [SerializeField] private InanimateObject? toolCondition;
-    [SerializeField] private InanimateObject? toolNeutralizerCondition;
-    [SerializeField] private Human? ñondition;
+    [SerializeField] private ScriptableObject? toolCondition;
+    [SerializeField] private ScriptableObject? toolNeutralizerCondition;
+    [SerializeField] private ScriptableObject? ñondition;
+    [SerializeField] private double toolNeutralizerProductivity;
+    [SerializeField] private double toolNeutralizerTimeRequired;
     [SerializeField] private double coefficient;
 
     public void CreateObject(TMP_Dropdown dropdownType)
@@ -149,7 +152,7 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
                 var newObj5 = ScriptableObject.CreateInstance<ThreatAndOpportunity>();
                 newObj5 = newTAO;
 
-                if (AssetDatabase.LoadAssetAtPath<Location>($"Assets/Scripts/Other/ThreatAndOpportunity/{newObj5.GetName()}.asset") == null)
+                if (AssetDatabase.LoadAssetAtPath<ThreatAndOpportunity>($"Assets/Scripts/Other/ThreatAndOpportunity/{newObj5.GetName()}.asset") == null)
                 {
                     AssetDatabase.CreateAsset(newObj5, $"Assets/Scripts/Other/ThreatAndOpportunity/{newObj5.GetName()}.asset");
                     AssetDatabase.SaveAssets();
@@ -157,13 +160,13 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
                 }
                 break;
             case "Ðàáîòà (Äåéñòâèå)":
-                var newAction = new Action(nameObject, toolProductivity, timeRequired, toolCondition, toolNeutralizerCondition, ñondition, coefficient);
+                var newAction = new Action(nameObject, toolProductivity, timeRequired, toolCondition, toolNeutralizerCondition, ñondition, coefficient, toolNeutralizerProductivity, toolNeutralizerTimeRequired);
                 var newObj6 = ScriptableObject.CreateInstance<Action>();
                 newObj6 = newAction;
 
-                if (AssetDatabase.LoadAssetAtPath<Action>($"Assets/Scripts/Other/ThreatAndOpportunity/{newObj6.GetName()}.asset") == null)
+                if (AssetDatabase.LoadAssetAtPath<Action>($"Assets/Scripts/Other/Action/{newObj6.GetName()}.asset") == null)
                 {
-                    AssetDatabase.CreateAsset(newObj6, $"Assets/Scripts/Other/ThreatAndOpportunity/{newObj6.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj6, $"Assets/Scripts/Other/Action/{newObj6.GetName()}.asset");
                     AssetDatabase.SaveAssets();
                     TAOTable.AddTAO(newAction.GetName());
                 }
@@ -401,5 +404,129 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
             if (nameLocation == location.GetName())
                 locationsDistance.Add(location, tempDistance);
         }
+    }
+
+    public void ChangeTypeTAO(TMP_Dropdown dropdown)
+    {
+        var typeName = dropdown.options[dropdown.value].text;
+        if (typeName == "Óãðîçà")
+            typeTAO = ThreatAndOpportunity.Type.threat;
+        else if(typeName == "Âîçìîæíîñòü")
+            typeTAO = ThreatAndOpportunity.Type.opportunity;
+    }
+
+    public void ChangeTimeActionCoeff(Slider slider)
+    {
+        changeTimeAction = (int)slider.value;
+    }
+
+    public void ChangeCountCoeff(Slider slider)
+    {
+        changeCount = (int)slider.value;
+    }
+
+    public void AddNeutralizer(TMP_Dropdown dropdown)
+    {
+        var nameNeutralizer = dropdown.options[dropdown.value].text;
+        neutralizer = toolNeutralizationTable.GetObject(nameNeutralizer);
+        if(neutralizer == null)
+            dropdown.value = 0;
+    }
+
+    public void ChangeUVCoeff(Slider slider)
+    {
+        changeUV = (int)slider.value;
+    }
+
+    public void SetProbability(Slider slider)
+    {
+        probability = (int)slider.value;
+    }
+
+    public Dictionary<string, Table> GetTables()
+    {
+        var dictionaryTables = new Dictionary<string, Table>();
+        dictionaryTables.Add("humanTable", humanTable);
+        dictionaryTables.Add("characters", characters);
+        dictionaryTables.Add("animals", animals);
+        dictionaryTables.Add("locationTable", locationTable);
+        dictionaryTables.Add("toolTable", toolTable);
+        dictionaryTables.Add("toolNeutralizationTable", toolNeutralizationTable);
+        return dictionaryTables;
+    }
+
+    public void SetTrigger(TMP_Dropdown dropdown)
+    {
+        var nameTrigger = dropdown.options[dropdown.value].text;
+
+        ScriptableObject temptrigger = toolTable.GetObject(nameTrigger);
+        if (temptrigger != null)
+            trigger = temptrigger;
+        temptrigger = animals.GetObject(nameTrigger);
+        if (temptrigger != null)
+            trigger = temptrigger;
+    }
+
+    public void SetProductivity(Slider slider)
+    {
+        toolProductivity = (int)slider.value;
+    }
+
+    public void SetTimeRequired(Slider slider)
+    {
+        timeRequired = (int)slider.value;
+    }
+
+    public void SetStandartCoefficient(Slider slider)
+    {
+        coefficient = (int)slider.value;
+    }
+
+    public void SetToolNeutralizerProductivity(Slider slider)
+    {
+        toolNeutralizerProductivity = (int)slider.value;
+    }
+
+    public void SetToolNeutralizerTimeRequired(Slider slider)
+    {
+        toolNeutralizerTimeRequired = (int)slider.value;
+    }
+
+
+    public void AddToolCondition(TMP_Dropdown dropdown)
+    {
+        var condition = dropdown.options[dropdown.value].text;
+
+        ScriptableObject temptrigger = toolTable.GetObject(condition);
+        if (temptrigger != null)
+            toolCondition = temptrigger;
+        temptrigger = animals.GetObject(condition);
+        if (temptrigger != null)
+            toolCondition = temptrigger;
+    }
+
+    public void AddToolNeutralizerCondition(TMP_Dropdown dropdown)
+    {
+        var condition = dropdown.options[dropdown.value].text;
+
+        ScriptableObject temptrigger = toolTable.GetObject(condition);
+        if (temptrigger != null)
+            toolNeutralizerCondition = temptrigger;
+        temptrigger = animals.GetObject(condition);
+        if (temptrigger != null)
+            toolNeutralizerCondition = temptrigger;
+    }
+
+
+    public void AddCondition(TMP_Dropdown dropdown)
+    {
+        var condition = dropdown.options[dropdown.value].text;
+
+        ScriptableObject temptrigger = toolTable.GetObject(condition);
+        if (temptrigger != null)
+            this.ñondition = temptrigger;
+        temptrigger = animals.GetObject(condition);
+        if (temptrigger != null)
+            this.ñondition = temptrigger;
     }
 }

@@ -19,10 +19,10 @@ public class ThreatAndOpportunity : ScriptableObject
     //Коэффицент на вероятность появления
     [SerializeField] private double probability;
     // Персонаж воздействия
-    [SerializeField] private GameObject trigger;
+    [SerializeField] private ScriptableObject trigger;
 
 
-    public ThreatAndOpportunity(string name, Type typeObject, double changeTimeAction, double changeCount, InanimateObject neutralizer, double changeUV, double probability, GameObject trigger)
+    public ThreatAndOpportunity(string name, Type typeObject, double changeTimeAction, double changeCount, InanimateObject neutralizer, double changeUV, double probability, ScriptableObject trigger)
     {
         this.name = name;
         this.typeObject = typeObject;

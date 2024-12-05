@@ -2122,7 +2122,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 866480429}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 69395961}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -2583,6 +2595,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/InanimateObject
+  table: {fileID: 11400000, guid: 8c91823c1f196e3468731270b44231f0, type: 2}
+  category: 5
 --- !u!114 &92252975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2637,7 +2651,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: AddToolNeutralizerCondition
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 92252975}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &92252976
 MonoBehaviour:
@@ -4084,6 +4110,200 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &147718112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147718113}
+  - component: {fileID: 147718117}
+  - component: {fileID: 147718116}
+  - component: {fileID: 147718115}
+  - component: {fileID: 147718114}
+  m_Layer: 5
+  m_Name: ButtonCreateThreatAdnOpportunity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &147718113
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147718112}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1066801555}
+  m_Father: {fileID: 259853574}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 417, y: -264}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &147718114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147718112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7344473a34c7fe4a951c83df516030f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  humanTable: {fileID: 11400000, guid: b1b81c1b53a51ce438a4c7f1b451ca97, type: 2}
+  characters: {fileID: 11400000, guid: 82e2d1a1d6dcb324fbe64f176c6a41bf, type: 2}
+  animals: {fileID: 11400000, guid: 48fa8ea3d769aee47a03ed3eb87cb525, type: 2}
+  actions: {fileID: 11400000, guid: 8c91823c1f196e3468731270b44231f0, type: 2}
+  questionsTable: {fileID: 11400000, guid: 49b7dd5fa0010484babaafdeee92e2c1, type: 2}
+  toolNeutralizationTable: {fileID: 11400000, guid: bce9a08c38eea954fb3a6e240e4f8c5e, type: 2}
+  toolTable: {fileID: 11400000, guid: a0d2725e4ce256743aee81a1d74ea2f0, type: 2}
+  locationTable: {fileID: 11400000, guid: 7d44d2c6b95cc5748ac663671b012a8c, type: 2}
+  TAOTable: {fileID: 11400000, guid: 6c7cdbb305ea7ad48808511e40c799d6, type: 2}
+  nameObject: 
+  listActions: []
+  isTarget: 0
+  isTO: 0
+  isFalseTarget: 0
+  slots:
+    _serializedList: []
+  toolNeutralization: {fileID: 0}
+  isCharacter: 0
+  quests: []
+  isCustomer: 0
+  TAO: {fileID: 0}
+  inanimateType: 0
+  locations: []
+  giveAction: {fileID: 0}
+  buffCoefficient: 0
+  threat: {fileID: 0}
+  opportunity: {fileID: 0}
+  needAction: {fileID: 0}
+  slotsRequire: 0
+  numberOfAvailable: 0
+  isNeutralizer: 0
+  locationsDistance:
+    _serializedList: []
+  typeTAO: 0
+  changeTimeAction: 0
+  changeCount: 0
+  neutralizer: {fileID: 0}
+  changeUV: 0
+  probability: 0
+  trigger: {fileID: 0}
+  toolProductivity: 0
+  timeRequired: 0
+  toolCondition: {fileID: 0}
+  toolNeutralizerCondition: {fileID: 0}
+  "\u0441ondition": {fileID: 0}
+  toolNeutralizerProductivity: 0
+  toolNeutralizerTimeRequired: 0
+  coefficient: 0
+--- !u!114 &147718115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147718112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 147718116}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 147718114}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: CreateObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1133746132}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &147718116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147718112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &147718117
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147718112}
+  m_CullTransparentMesh: 1
 --- !u!1 &149687349
 GameObject:
   m_ObjectHideFlags: 0
@@ -6614,6 +6834,7 @@ RectTransform:
   - {fileID: 1990368656}
   - {fileID: 2069878754}
   - {fileID: 1387064442}
+  - {fileID: 147718113}
   m_Father: {fileID: 909394909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6629,9 +6850,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259853573}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &259853576
 MonoBehaviour:
@@ -7745,7 +7966,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637401871}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 297194840}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -8356,7 +8589,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1840148579}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 350370663}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -8705,6 +8950,14 @@ MonoBehaviour:
   changeUV: 0
   probability: 0
   trigger: {fileID: 0}
+  toolProductivity: 0
+  timeRequired: 0
+  toolCondition: {fileID: 0}
+  toolNeutralizerCondition: {fileID: 0}
+  "\u0441ondition": {fileID: 0}
+  toolNeutralizerProductivity: 0
+  toolNeutralizerTimeRequired: 0
+  coefficient: 0
 --- !u!114 &361956166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10342,6 +10595,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/ThreatAndOpportunity
+  table: {fileID: 0}
+  category: 0
 --- !u!114 &440546837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10957,6 +11212,14 @@ MonoBehaviour:
   changeUV: 0
   probability: 0
   trigger: {fileID: 0}
+  toolProductivity: 0
+  timeRequired: 0
+  toolCondition: {fileID: 0}
+  toolNeutralizerCondition: {fileID: 0}
+  "\u0441ondition": {fileID: 0}
+  toolNeutralizerProductivity: 0
+  toolNeutralizerTimeRequired: 0
+  coefficient: 0
 --- !u!114 &447926531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13978,7 +14241,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 667586798}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 565103310}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -15339,6 +15614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603325505}
   - component: {fileID: 603325506}
+  - component: {fileID: 603325507}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -15419,18 +15695,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1271721005}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 603325507}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1271721005}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 147718114}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: SetProbability
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 603325506}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &603325507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603325504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &609764372
 GameObject:
   m_ObjectHideFlags: 0
@@ -15707,7 +16007,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15716,8 +16016,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 3358732850
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15741,8 +16041,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -15959,7 +16259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041D\u0435\u0436\u0438\u0432\u043E\u0439 \u043E\u0431\u044A\u0435\u043A\u0442"
+  m_text: "\u0420\u0430\u0431\u043E\u0442\u0430 (\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16445,6 +16745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 637401869}
   - component: {fileID: 637401870}
+  - component: {fileID: 637401871}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -16525,18 +16826,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297194840}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 637401871}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 297194840}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: SetToolNeutralizerTimeRequired
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 637401870}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &637401871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637401868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &639460243
 GameObject:
   m_ObjectHideFlags: 0
@@ -16988,6 +17313,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654501842}
   m_CullTransparentMesh: 1
+--- !u!1 &667129442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667129443}
+  - component: {fileID: 667129445}
+  - component: {fileID: 667129444}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &667129443
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667129442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1578388478}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &667129444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667129442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0421\u043E\u0437\u0434\u0430\u0442\u044C"
+--- !u!222 &667129445
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667129442}
+  m_CullTransparentMesh: 1
 --- !u!1 &667586795
 GameObject:
   m_ObjectHideFlags: 0
@@ -16998,6 +17402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 667586796}
   - component: {fileID: 667586797}
+  - component: {fileID: 667586798}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -17078,18 +17483,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297194840}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 667586798}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 565103310}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: SetStandartCoefficient
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 667586797}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &667586798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667586795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &673919297
 GameObject:
   m_ObjectHideFlags: 0
@@ -18395,7 +18824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719723369}
   m_Layer: 5
-  m_Name: Condition
+  m_Name: ConditionExtract
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19835,7 +20264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &786008537
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20285,7 +20714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20294,8 +20723,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 3039965746
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.70980394}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20319,8 +20748,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -21275,6 +21704,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 147718114}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: ChangeName
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 836356520}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: ChangeName
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 836356520}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21519,7 +21972,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2033665578}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 840301907}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -21862,6 +22327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 866480427}
   - component: {fileID: 866480428}
+  - component: {fileID: 866480429}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -21942,18 +22408,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 69395961}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 866480429}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 69395961}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: SetProductivity
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 866480428}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &866480429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866480426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &867991479
 GameObject:
   m_ObjectHideFlags: 0
@@ -22011,6 +22501,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/ThreatAndOpportunity
+  table: {fileID: 0}
+  category: 0
 --- !u!114 &867991482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22533,7 +23025,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1443687032}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 896352511}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -22685,6 +23189,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 395838952}
   pathFolder: Assets/Scripts/Other/Location
+  table: {fileID: 0}
+  category: 0
 --- !u!114 &901592888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23220,7 +23726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23254,8 +23760,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -23642,6 +24148,14 @@ MonoBehaviour:
   changeUV: 0
   probability: 0
   trigger: {fileID: 0}
+  toolProductivity: 0
+  timeRequired: 0
+  toolCondition: {fileID: 0}
+  toolNeutralizerCondition: {fileID: 0}
+  "\u0441ondition": {fileID: 0}
+  toolNeutralizerProductivity: 0
+  toolNeutralizerTimeRequired: 0
+  coefficient: 0
 --- !u!114 &921441408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23748,7 +24262,7 @@ GameObject:
   - component: {fileID: 922547124}
   - component: {fileID: 922547123}
   m_Layer: 5
-  m_Name: ConditionText
+  m_Name: ConditionExtractText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24345,6 +24859,7 @@ RectTransform:
   - {fileID: 707736465}
   - {fileID: 1652530946}
   - {fileID: 861032861}
+  - {fileID: 1578388478}
   m_Father: {fileID: 909394909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -24360,9 +24875,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936947515}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &936947518
 MonoBehaviour:
@@ -24517,6 +25032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943097707}
   - component: {fileID: 943097708}
+  - component: {fileID: 943097709}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -24597,18 +25113,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1871906843}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 943097709}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1871906843}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: SetTimeRequired
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 943097708}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &943097709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943097706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &943155281
 GameObject:
   m_ObjectHideFlags: 0
@@ -25034,7 +25574,7 @@ GameObject:
   - component: {fileID: 978905367}
   - component: {fileID: 978905366}
   m_Layer: 5
-  m_Name: ConditionText
+  m_Name: ConditionUseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26972,6 +27512,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058780036}
   m_CullTransparentMesh: 1
+--- !u!1 &1066801554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1066801555}
+  - component: {fileID: 1066801557}
+  - component: {fileID: 1066801556}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1066801555
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066801554}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 147718113}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1066801556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066801554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0421\u043E\u0437\u0434\u0430\u0442\u044C"
+--- !u!222 &1066801557
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066801554}
+  m_CullTransparentMesh: 1
 --- !u!1 &1067387626
 GameObject:
   m_ObjectHideFlags: 0
@@ -27147,6 +27766,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 1185271282}
   pathFolder: Assets/Scripts/Other/Quest system/Quests
+  table: {fileID: 0}
+  category: 0
 --- !u!1 &1076530619
 GameObject:
   m_ObjectHideFlags: 0
@@ -27763,7 +28384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27797,8 +28418,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -28204,6 +28825,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/Action
+  table: {fileID: 0}
+  category: 0
 --- !u!1 &1126785685
 GameObject:
   m_ObjectHideFlags: 0
@@ -28458,7 +29081,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 503311624}
   m_ItemImage: {fileID: 0}
-  m_Value: 2
+  m_Value: 5
   m_Options:
     m_Options:
     - m_Text: "\u0427\u0435\u043B\u043E\u0432\u0435\u043A"
@@ -29589,7 +30212,7 @@ GameObject:
   - component: {fileID: 1175558400}
   - component: {fileID: 1175558399}
   m_Layer: 5
-  m_Name: DropdownCountable 1
+  m_Name: DropdownTypeTAO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29673,7 +30296,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 147718114}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: ChangeTypeTAO
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1175558399}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1175558400
 MonoBehaviour:
@@ -30522,7 +31157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -344.54337, y: -159}
+  m_AnchoredPosition: {x: -337, y: -75}
   m_SizeDelta: {x: 300, y: 29.999908}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1204855538
@@ -31002,6 +31637,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/InanimateObject
+  table: {fileID: 11400000, guid: bce9a08c38eea954fb3a6e240e4f8c5e, type: 2}
+  category: 1
 --- !u!114 &1222633020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31056,7 +31693,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 147718114}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: AddNeutralizer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1222633020}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1222633021
 MonoBehaviour:
@@ -31847,7 +32496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31881,8 +32530,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -32298,7 +32947,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 603325507}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1271721005}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -33193,6 +33854,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/InanimateObject
+  table: {fileID: 11400000, guid: 8c91823c1f196e3468731270b44231f0, type: 2}
+  category: 5
 --- !u!114 &1320349499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33247,7 +33910,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: AddToolCondition
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1320349499}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1320349500
 MonoBehaviour:
@@ -35152,7 +35827,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1841336421}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1398565552}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -36584,6 +37271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443687030}
   - component: {fileID: 1443687031}
+  - component: {fileID: 1443687032}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -36664,18 +37352,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 896352511}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 147718114}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: ChangeCountCoeff
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1443687031}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1443687032}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 896352511}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1443687032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443687029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1443890372
 GameObject:
   m_ObjectHideFlags: 0
@@ -37389,6 +38101,14 @@ MonoBehaviour:
   changeUV: 0
   probability: 0
   trigger: {fileID: 0}
+  toolProductivity: 0
+  timeRequired: 0
+  toolCondition: {fileID: 0}
+  toolNeutralizerCondition: {fileID: 0}
+  "\u0441ondition": {fileID: 0}
+  toolNeutralizerProductivity: 0
+  toolNeutralizerTimeRequired: 0
+  coefficient: 0
 --- !u!1 &1470697054
 GameObject:
   m_ObjectHideFlags: 0
@@ -37818,6 +38538,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 1185271282}
   pathFolder: Assets/Scripts/Other/Human
+  table: {fileID: 11400000, guid: 8c91823c1f196e3468731270b44231f0, type: 2}
+  category: 5
 --- !u!114 &1498269091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37873,21 +38595,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1498269090}
-        m_TargetAssemblyTypeName: ObjectCreatorItemListDropdownField, Assembly-CSharp
-        m_MethodName: AddItemInList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1469137738}
+      - m_Target: {fileID: 147718114}
         m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
-        m_MethodName: AddQuestAvialable
+        m_MethodName: SetTrigger
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1498269091}
@@ -39214,7 +39924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -39223,8 +39933,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 3358732850
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -39248,8 +39958,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -39740,6 +40450,200 @@ RectTransform:
   m_AnchoredPosition: {x: 412, y: 314.50003}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1578388477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1578388478}
+  - component: {fileID: 1578388482}
+  - component: {fileID: 1578388481}
+  - component: {fileID: 1578388480}
+  - component: {fileID: 1578388479}
+  m_Layer: 5
+  m_Name: ButtonCreateAction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1578388478
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578388477}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 667129443}
+  m_Father: {fileID: 936947516}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 417, y: -264}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1578388479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578388477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7344473a34c7fe4a951c83df516030f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  humanTable: {fileID: 11400000, guid: b1b81c1b53a51ce438a4c7f1b451ca97, type: 2}
+  characters: {fileID: 11400000, guid: 82e2d1a1d6dcb324fbe64f176c6a41bf, type: 2}
+  animals: {fileID: 11400000, guid: 48fa8ea3d769aee47a03ed3eb87cb525, type: 2}
+  actions: {fileID: 11400000, guid: 8c91823c1f196e3468731270b44231f0, type: 2}
+  questionsTable: {fileID: 11400000, guid: 49b7dd5fa0010484babaafdeee92e2c1, type: 2}
+  toolNeutralizationTable: {fileID: 11400000, guid: bce9a08c38eea954fb3a6e240e4f8c5e, type: 2}
+  toolTable: {fileID: 11400000, guid: a0d2725e4ce256743aee81a1d74ea2f0, type: 2}
+  locationTable: {fileID: 11400000, guid: 7d44d2c6b95cc5748ac663671b012a8c, type: 2}
+  TAOTable: {fileID: 11400000, guid: 6c7cdbb305ea7ad48808511e40c799d6, type: 2}
+  nameObject: 
+  listActions: []
+  isTarget: 0
+  isTO: 0
+  isFalseTarget: 0
+  slots:
+    _serializedList: []
+  toolNeutralization: {fileID: 0}
+  isCharacter: 0
+  quests: []
+  isCustomer: 0
+  TAO: {fileID: 0}
+  inanimateType: 0
+  locations: []
+  giveAction: {fileID: 0}
+  buffCoefficient: 0
+  threat: {fileID: 0}
+  opportunity: {fileID: 0}
+  needAction: {fileID: 0}
+  slotsRequire: 0
+  numberOfAvailable: 0
+  isNeutralizer: 0
+  locationsDistance:
+    _serializedList: []
+  typeTAO: 0
+  changeTimeAction: 0
+  changeCount: 0
+  neutralizer: {fileID: 0}
+  changeUV: 0
+  probability: 0
+  trigger: {fileID: 0}
+  toolProductivity: 0
+  timeRequired: 0
+  toolCondition: {fileID: 0}
+  toolNeutralizerCondition: {fileID: 0}
+  "\u0441ondition": {fileID: 0}
+  toolNeutralizerProductivity: 0
+  toolNeutralizerTimeRequired: 0
+  coefficient: 0
+--- !u!114 &1578388480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578388477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1578388481}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: CreateObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1133746132}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1578388481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578388477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1578388482
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578388477}
+  m_CullTransparentMesh: 1
 --- !u!1 &1585524871
 GameObject:
   m_ObjectHideFlags: 0
@@ -39969,6 +40873,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/Action
+  table: {fileID: 0}
+  category: 0
 --- !u!114 &1587317599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40983,7 +41889,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -40992,8 +41898,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 3358732850
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -41017,8 +41923,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -41340,7 +42246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652530946}
   m_Layer: 5
-  m_Name: Condition
+  m_Name: ConditionUse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42407,6 +43313,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/InanimateObject
+  table: {fileID: 0}
+  category: 0
 --- !u!114 &1681465568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42461,7 +43369,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: AddNeutralizer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1681465568}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1681465569
 MonoBehaviour:
@@ -46617,6 +47537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1840148577}
   - component: {fileID: 1840148578}
+  - component: {fileID: 1840148579}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -46697,18 +47618,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 350370663}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 147718114}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: ChangeUVCoeff
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1840148578}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840148579}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 350370663}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1840148579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840148576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1841336418
 GameObject:
   m_ObjectHideFlags: 0
@@ -46719,6 +47664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841336419}
   - component: {fileID: 1841336420}
+  - component: {fileID: 1841336421}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -46799,18 +47745,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1398565552}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 1841336421}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1398565552}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: SetToolNeutralizerProductivity
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1841336420}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1841336421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841336418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1842681886
 GameObject:
   m_ObjectHideFlags: 0
@@ -47031,6 +48001,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/InanimateObject
+  table: {fileID: 11400000, guid: 8c91823c1f196e3468731270b44231f0, type: 2}
+  category: 5
 --- !u!114 &1850373645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47085,7 +48057,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1578388479}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: AddCondition
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1850373645}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Dropdown, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1850373646
 MonoBehaviour:
@@ -47316,6 +48300,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 737085760}
   pathFolder: Assets/Scripts/Other/Action
+  table: {fileID: 0}
+  category: 0
 --- !u!114 &1859181264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47536,7 +48522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -47545,8 +48531,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 3358732850
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -47570,8 +48556,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -47842,7 +48828,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 943097709}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: SetSliderValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1871906843}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -48054,6 +49052,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 1609365798}
   pathFolder: Assets/Scripts/Other/Location
+  table: {fileID: 0}
+  category: 0
 --- !u!114 &1877000066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50276,7 +51276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -50285,8 +51285,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2150773298
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+    rgba: 3358732850
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -50310,8 +51310,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -50582,6 +51582,8 @@ MonoBehaviour:
   NameSelectItem: 
   prefabe: {fileID: 1497810363}
   pathFolder: Assets/Scripts/Other/Action
+  table: {fileID: 0}
+  category: 0
 --- !u!114 &1997492866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51581,6 +52583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2033665576}
   - component: {fileID: 2033665577}
+  - component: {fileID: 2033665578}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -51661,18 +52664,42 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 840301907}
-        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
+      - m_Target: {fileID: 147718114}
+        m_TargetAssemblyTypeName: ObjectCreatorButtonCreate, Assembly-CSharp
+        m_MethodName: ChangeTimeActionCoeff
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2033665577}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2033665578}
+        m_TargetAssemblyTypeName: SliderText, Assembly-CSharp
+        m_MethodName: TextFieldChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 840301907}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2033665578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033665575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5149826d5de29c48badd9b22f2b295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2047843478
 GameObject:
   m_ObjectHideFlags: 0

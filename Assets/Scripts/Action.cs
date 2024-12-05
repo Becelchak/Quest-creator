@@ -19,7 +19,7 @@ public class Action : ScriptableObject
     // Затраты времени на выполнение действия
     [SerializeField] private double timeRequired;
     // Условие для добычи
-    [SerializeField] private InanimateObject? toolCondition;
+    [SerializeField] private ScriptableObject? toolCondition;
     // Нейтрализатор. Определяется уже во время этапа планирования
     [SerializeField] private InanimateObject? toolNeutralizer;
     // Определяется уже во время этапа планирования
@@ -27,19 +27,21 @@ public class Action : ScriptableObject
     // Определяется уже во время этапа планирования
     [SerializeField] private double toolNeutralizerTimeRequired;
     //Условие для использования инструмента нейтрализатора
-    [SerializeField] private InanimateObject? toolNeutralizerCondition;
+    [SerializeField] private ScriptableObject? toolNeutralizerCondition;
     // Условие вместе с персонажем
-    [SerializeField] private Human? сondition;
+    [SerializeField] private ScriptableObject? сondition;
 
     [SerializeField] private double coefficient;
 
-    public Action(string name, double toolProductivity, double timeRequired, InanimateObject toolCondition, InanimateObject toolNeutralizerCondition, Human сondition, double coefficient)
+    public Action(string name, double toolProductivity, double timeRequired, ScriptableObject toolCondition, ScriptableObject toolNeutralizerCondition, ScriptableObject сondition, double coefficient, double toolNeutralizerProductivity, double toolNeutralizerTimeRequired)
     {
         this.name = name;
         this.toolProductivity = toolProductivity;
         this.timeRequired = timeRequired;
         this.toolCondition = toolCondition;
         this.toolNeutralizerCondition = toolNeutralizerCondition;
+        this.toolNeutralizerProductivity = toolNeutralizerProductivity;
+        this.toolNeutralizerTimeRequired = toolNeutralizerTimeRequired;
         this.сondition = сondition;
         this.coefficient = coefficient;
     }

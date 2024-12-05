@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Tables/ ToolsTable")]
-public class ToolsTable : ScriptableObject
+public class ToolsTable : Table
 {
     [SerializeField] private List<InanimateObject> table;
 

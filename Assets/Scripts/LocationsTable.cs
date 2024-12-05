@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Tables/ LocationsTable")]
-public class LocationsTable : ScriptableObject
+public class LocationsTable : Table
 {
     [SerializeField] private List<Location> table;
     public void AddLocation(string assetName)
