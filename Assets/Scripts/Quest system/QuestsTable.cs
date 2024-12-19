@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
-[CreateAssetMenu(menuName = "Quest system/ QuestionsTable")]
-public class QuestionsTable : ScriptableObject
+[CreateAssetMenu(menuName = "Quest system/ QuestsTable")]
+public class QuestsTable : ScriptableObject
 {
     [SerializeField] private List<Quest> table;
     public List<Quest> GetTable() { return table; }

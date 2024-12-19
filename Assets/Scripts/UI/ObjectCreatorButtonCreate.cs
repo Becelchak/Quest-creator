@@ -16,7 +16,7 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
     [SerializeField] private HumanTable characters;
     [SerializeField] private AnimalTable animals;
     [SerializeField] private ActionTable actions;
-    [SerializeField] private QuestionsTable questionsTable;
+    [SerializeField] private QuestsTable questsTable;
     [SerializeField] private ToolsTable toolNeutralizationTable;
     [SerializeField] private ToolsTable toolTable;
     [SerializeField] private LocationsTable locationTable;
@@ -205,7 +205,7 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
     {
         var nameQuest = dropdown.options[dropdown.value].text;
 
-        foreach (var quest in questionsTable.GetTable())
+        foreach (var quest in questsTable.GetTable())
         {
             if (nameQuest == quest.GetName())
                 quests.Add(quest);

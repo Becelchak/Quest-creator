@@ -31,7 +31,7 @@ public class Quest : ScriptableObject
     [SerializeField] private List<ThreatAndOpportunity> UV = new List<ThreatAndOpportunity>();
 
     // Вопросы для квеста
-    [SerializeField] private List<QuestionsTable> questions = new List<QuestionsTable>();
+    [SerializeField] private List<QuestionTable> questions = new List<QuestionTable>();
 
     // ??
     //[SerializeField] private string customer;

@@ -51,6 +51,27 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
                         dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
                     }
                     break;
+                case CategoryTable.target:
+                    var targetTable = table as TargetTable;
+                    foreach (var item in targetTable.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+                    break;
+                case CategoryTable.task:
+                    var taskTable = table as TaskTable;
+                    foreach (var item in taskTable.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+                    break;
+                case CategoryTable.TAO:
+                    var taoTable = table as ThreatAndOpportunityTable;
+                    foreach (var item in taoTable.GetTable())
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData(item.name));
+                    }
+                    break;
                 case CategoryTable.all:
                     var dictionaryTable = GameObject.Find("ButtonCreateThreatAdnOpportunity").GetComponent<ObjectCreatorButtonCreate>().GetTables();
                     toolTable1 = dictionaryTable["toolTable"] as ToolsTable;
@@ -158,6 +179,9 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
         human = 2,
         animal = 3,
         location = 4,
-        all = 5
+        all = 5,
+        target = 6,
+        task = 7,
+        TAO = 8,
     }
 }
