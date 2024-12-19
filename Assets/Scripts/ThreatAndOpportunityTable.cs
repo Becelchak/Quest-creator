@@ -10,7 +10,7 @@ public class ThreatAndOpportunityTable : Table
     [SerializeField] private List<ThreatAndOpportunity> table;
     public void AddTAO(string assetName)
     {
-        var ThreatAndOpportunityNew = AssetDatabase.LoadAssetAtPath<ThreatAndOpportunity>($"Assets/Scripts/Other/ThreatAndOpportunity/{assetName}.asset");
+        var ThreatAndOpportunityNew = AssetDatabase.LoadAssetAtPath<ThreatAndOpportunity>($"Assets/Resources/Other/ThreatAndOpportunity/{assetName}.asset");
         if (!table.Contains(ThreatAndOpportunityNew))
         {
             table.Add(ThreatAndOpportunityNew);

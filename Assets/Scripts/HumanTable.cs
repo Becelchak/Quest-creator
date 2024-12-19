@@ -10,10 +10,19 @@ public class HumanTable : Table
 
     public void AddHuman(string assetName)
     {
-        var humanNew = AssetDatabase.LoadAssetAtPath<Human>($"Assets/Scripts/Other/Human/{assetName}.asset");
+        var humanNew = AssetDatabase.LoadAssetAtPath<Human>($"Assets/Resources/Other/Human/{assetName}.asset");
         if(!table.Contains(humanNew))
         {
             table.Add(humanNew);
+        }
+    }
+
+    public void AddCharacter(string assetName)
+    {
+        var characterNew = AssetDatabase.LoadAssetAtPath<Human>($"Assets/Resources/Other/Character/{assetName}.asset");
+        if (!table.Contains(characterNew))
+        {
+            table.Add(characterNew);
         }
     }
 

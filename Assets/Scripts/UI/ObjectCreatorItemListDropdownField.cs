@@ -11,7 +11,7 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
     [SerializeField] private string NameSelectItem;
     [SerializeField] private GameObject prefabe;
 
-    [SerializeField] private string pathFolder = "Assets/Scripts/Other/Quest system/Quests";
+    [SerializeField] private string pathFolder = "Assets/Resources/Other/Quest system/Quests";
     [SerializeField] private Table table;
     [SerializeField] private CategoryTable category;
     private TMP_Dropdown dropdown;

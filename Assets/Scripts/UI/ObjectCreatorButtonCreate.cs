@@ -81,6 +81,13 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
     [SerializeField] private double toolNeutralizerTimeRequired;
     [SerializeField] private double coefficient;
 
+    private TableCanvasContainer tableObjects;
+
+    private void Start()
+    {
+        tableObjects = GameObject.Find("ContainerTableObjects").GetComponent<TableCanvasContainer>();
+    }
+
     public void CreateObject(TMP_Dropdown dropdownType)
     {
         var typeObject = dropdownType.options[dropdownType.value].text;
@@ -92,17 +99,17 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
 
                 newObj = newHuman;
 
-                if(AssetDatabase.LoadAssetAtPath<Human>($"Assets/Scripts/Other/Human/{newObj.GetName()}.asset") == null && newObj.IsCharacter() != "Это персонаж")
+                if(AssetDatabase.LoadAssetAtPath<Human>($"Assets/Resources/Other/Human/{newObj.GetName()}.asset") == null && newObj.IsCharacter() != "Это персонаж")
                 {
-                    AssetDatabase.CreateAsset(newObj, $"Assets/Scripts/Other/Human/{newObj.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj, $"Assets/Resources/Other/Human/{newObj.GetName()}.asset");
                     AssetDatabase.SaveAssets();
                     humanTable.AddHuman(newObj.GetName());
                 }
-                else if(AssetDatabase.LoadAssetAtPath<Human>($"Assets/Scripts/Other/Character/{newObj.GetName()}.asset") == null && newObj.IsCharacter() == "Это персонаж")
+                else if(AssetDatabase.LoadAssetAtPath<Human>($"Assets/Resources/Other/Character/{newObj.GetName()}.asset") == null && newObj.IsCharacter() == "Это персонаж")
                 {
-                    AssetDatabase.CreateAsset(newObj, $"Assets/Scripts/Other/Character/{newObj.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj, $"Assets/Resources/Other/Character/{newObj.GetName()}.asset");
                     AssetDatabase.SaveAssets();
-                    characters.AddHuman(newObj.GetName());
+                    characters.AddCharacter(newObj.GetName());
                 }
                 break;
             case "Животное":
@@ -110,9 +117,9 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
                 var newObj2 = ScriptableObject.CreateInstance<Animal>();
                 newObj2 = newAnimal;
 
-                if (AssetDatabase.LoadAssetAtPath<Animal>($"Assets/Scripts/Other/Animal/{newObj2.GetName()}.asset") == null)
+                if (AssetDatabase.LoadAssetAtPath<Animal>($"Assets/Resources/Other/Animal/{newObj2.GetName()}.asset") == null)
                 {
-                    AssetDatabase.CreateAsset(newObj2, $"Assets/Scripts/Other/Animal/{newObj2.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj2, $"Assets/Resources/Other/Animal/{newObj2.GetName()}.asset");
                     AssetDatabase.SaveAssets();
                     animals.AddAnimal(newObj2.GetName());
                 }
@@ -122,15 +129,15 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
                 var newObj3 = ScriptableObject.CreateInstance<InanimateObject>();
                 newObj3 = newInanimateObject;
 
-                if (AssetDatabase.LoadAssetAtPath<InanimateObject>($"Assets/Scripts/Other/InanimateObject/{newObj3.GetName()}.asset") == null && !isNeutralizer)
+                if (AssetDatabase.LoadAssetAtPath<InanimateObject>($"Assets/Resources/Other/InanimateObject/{newObj3.GetName()}.asset") == null && !isNeutralizer)
                 {
-                    AssetDatabase.CreateAsset(newObj3, $"Assets/Scripts/Other/InanimateObject/{newObj3.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj3, $"Assets/Resources/Other/InanimateObject/{newObj3.GetName()}.asset");
                     AssetDatabase.SaveAssets();
                     toolTable.AddObject(newObj3.GetName());
                 }
-                else if(AssetDatabase.LoadAssetAtPath<InanimateObject>($"Assets/Scripts/Other/InanimateObject/{newObj3.GetName()}.asset") == null && isNeutralizer)
+                else if(AssetDatabase.LoadAssetAtPath<InanimateObject>($"Assets/Resources/Other/InanimateObject/{newObj3.GetName()}.asset") == null && isNeutralizer)
                 {
-                    AssetDatabase.CreateAsset(newObj3, $"Assets/Scripts/Other/InanimateObject/{newObj3.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj3, $"Assets/Resources/Other/InanimateObject/{newObj3.GetName()}.asset");
                     AssetDatabase.SaveAssets();
                     toolNeutralizationTable.AddObject(newObj3.GetName());
                 }
@@ -140,9 +147,9 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
                 var newObj4 = ScriptableObject.CreateInstance<Location>();
                 newObj4 = newLocation;
 
-                if (AssetDatabase.LoadAssetAtPath<Location>($"Assets/Scripts/Other/Location/{newObj4.GetName()}.asset") == null)
+                if (AssetDatabase.LoadAssetAtPath<Location>($"Assets/Resources/Other/Location/{newObj4.GetName()}.asset") == null)
                 {
-                    AssetDatabase.CreateAsset(newObj4, $"Assets/Scripts/Other/Location/{newObj4.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj4, $"Assets/Resources/Other/Location/{newObj4.GetName()}.asset");
                     AssetDatabase.SaveAssets();
                     locationTable.AddLocation(newObj4.GetName());
                 }
@@ -152,9 +159,9 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
                 var newObj5 = ScriptableObject.CreateInstance<ThreatAndOpportunity>();
                 newObj5 = newTAO;
 
-                if (AssetDatabase.LoadAssetAtPath<ThreatAndOpportunity>($"Assets/Scripts/Other/ThreatAndOpportunity/{newObj5.GetName()}.asset") == null)
+                if (AssetDatabase.LoadAssetAtPath<ThreatAndOpportunity>($"Assets/Resources/Other/ThreatAndOpportunity/{newObj5.GetName()}.asset") == null)
                 {
-                    AssetDatabase.CreateAsset(newObj5, $"Assets/Scripts/Other/ThreatAndOpportunity/{newObj5.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj5, $"Assets/Resources/Other/ThreatAndOpportunity/{newObj5.GetName()}.asset");
                     AssetDatabase.SaveAssets();
                     TAOTable.AddTAO(newObj5.GetName());
                 }
@@ -164,16 +171,18 @@ public class ObjectCreatorButtonCreate : MonoBehaviour
                 var newObj6 = ScriptableObject.CreateInstance<Action>();
                 newObj6 = newAction;
 
-                if (AssetDatabase.LoadAssetAtPath<Action>($"Assets/Scripts/Other/Action/{newObj6.GetName()}.asset") == null)
+                if (AssetDatabase.LoadAssetAtPath<Action>($"Assets/Resources/Other/Action/{newObj6.GetName()}.asset") == null)
                 {
-                    AssetDatabase.CreateAsset(newObj6, $"Assets/Scripts/Other/Action/{newObj6.GetName()}.asset");
+                    AssetDatabase.CreateAsset(newObj6, $"Assets/Resources/Other/Action/{newObj6.GetName()}.asset");
                     AssetDatabase.SaveAssets();
-                    TAOTable.AddTAO(newAction.GetName());
+                    actions.AddObject(newAction.GetName());
                 }
                 break;
             default:
                 break;
         }
+
+        tableObjects.RefreshTable();
     }
 
     public void ChangeName(TMP_InputField newName)

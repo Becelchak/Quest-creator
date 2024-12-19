@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08999afb29a93c0469a758c58bd29aec, type: 3}
-  m_Name: "\u041A\u043E\u0442"
+  m_Name: "\u041C\u044B\u0448\u044C"
   m_EditorClassIdentifier: 
-  name: "\u041A\u043E\u0442"
+  name: "\u041C\u044B\u0448\u044C"
   actions:
   - {fileID: 11400000, guid: 05a29fd2104a2e2479acff4ff31b06ce, type: 2}
-  risk: {fileID: 11400000, guid: 17fa1ed68230fd24f8bf16a8cee69d31, type: 2}
+  risk: {fileID: 11400000, guid: b4056bbc40f88cb40bded78222d6096d, type: 2}
   isTarget: 0
-  isTO: 0
-  isFalseTarget: 1
+  isTO: 1
+  isFalseTarget: 0

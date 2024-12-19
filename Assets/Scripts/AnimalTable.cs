@@ -11,7 +11,7 @@ public class AnimalTable : Table
 
     public void AddAnimal(string assetName)
     {
-        var animalNew = AssetDatabase.LoadAssetAtPath<Animal>($"Assets/Scripts/Other/Animal/{assetName}.asset");
+        var animalNew = AssetDatabase.LoadAssetAtPath<Animal>($"Assets/Resources/Other/Animal/{assetName}.asset");
         if (!table.Contains(animalNew))
         {
             table.Add(animalNew);
