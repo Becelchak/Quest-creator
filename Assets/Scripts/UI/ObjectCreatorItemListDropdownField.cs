@@ -128,9 +128,6 @@ public class ObjectCreatorItemListDropdownField : MonoBehaviour
         }
         
     }
-    //public void AddItemInListByTable()
-    //{
-    //}
 
     public void AddItemInList()
     {

@@ -6,14 +6,14 @@ using UnityEngine;
 public class QuestionTable : Table
 {
     public int ID;
-    public List<Quest> Questions;
+    public List<Question> Questions;
 
-    public Quest GetQuest(int id)
+    public Question GetQuest(int id)
     {
         return Questions[id];
     }
 
-    public List<Quest> GetTable()
+    public List<Question> GetTable()
     {
         return Questions;
     }

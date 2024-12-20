@@ -19,10 +19,8 @@ public class ButtonFunctions : MonoBehaviour
     Text attr5;
     Text attr6;
 
-    public void ShowObject(ScriptableObject obj)
+    private void Start()
     {
-        cellObject = obj;
-
         name = GameObject.Find("Name").GetComponent<Text>();
         attr1 = GameObject.Find("Attribute 1").GetComponent<Text>();
         attr2 = GameObject.Find("Attribute 2").GetComponent<Text>();
@@ -30,6 +28,11 @@ public class ButtonFunctions : MonoBehaviour
         attr4 = GameObject.Find("Attribute 4").GetComponent<Text>();
         attr5 = GameObject.Find("Attribute 5").GetComponent<Text>();
         attr6 = GameObject.Find("Attribute 6").GetComponent<Text>();
+    }
+
+    public void ShowObject(ScriptableObject obj)
+    {
+        cellObject = obj;
 
         var strbuild = new StringBuilder();
 
@@ -126,5 +129,27 @@ public class ButtonFunctions : MonoBehaviour
         
 
 
+    }
+
+    public void ShowQuest(ScriptableObject quest)
+    {
+        var questObj = (Quest)quest;
+        name = GameObject.Find("QuestName").GetComponent<Text>();
+        attr1 = GameObject.Find("QuestAttribute 1").GetComponent<Text>();
+        attr2 = GameObject.Find("QuestAttribute 2").GetComponent<Text>();
+        attr3 = GameObject.Find("QuestAttribute 3").GetComponent<Text>();
+        attr4 = GameObject.Find("QuestAttribute 4").GetComponent<Text>();
+        attr5 = GameObject.Find("QuestAttribute 5").GetComponent<Text>();
+        attr6 = GameObject.Find("QuestAttribute 6").GetComponent<Text>();
+        var attr7 = GameObject.Find("QuestAttribute 7").GetComponent<Text>();
+
+        name.text = questObj.GetName();
+        attr1.text = questObj.GetDescription();
+        attr2.text = questObj.GetStringHours();
+        attr3.text = questObj.GetStringLocations();
+        attr4.text = questObj.GetStringTargets();
+        attr5.text = questObj.GetStringTasks();
+        attr6.text = questObj.GetStringTools();
+        attr7.text = questObj.GetStringTAO();
     }
 }

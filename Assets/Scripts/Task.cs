@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[CreateAssetMenu(menuName = "Quest system/ Task")]
 public class Task : ScriptableObject
 {
-    [SerializeField] private GameObject nameObject;
+    [SerializeField] private ScriptableObject nameObject;
     [SerializeField] private bool Limited;
     [SerializeField] private int LimitedCount;
 

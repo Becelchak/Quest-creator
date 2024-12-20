@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c2b31b3e1b2fd4c8bef7335875f80c, type: 3}
   m_Name: TaskTable
   m_EditorClassIdentifier: 
-  table: []
+  table:
+  - {fileID: 11400000, guid: c110bb3b612e504469a2b7cb9bfba793, type: 2}

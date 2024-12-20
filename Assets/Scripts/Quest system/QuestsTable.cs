@@ -8,4 +8,9 @@ public class QuestsTable : ScriptableObject
 {
     [SerializeField] private List<Quest> table;
     public List<Quest> GetTable() { return table; }
+
+    public void AddQuest(Quest quest)
+    {
+        table.Add(quest);
+    }
 }
